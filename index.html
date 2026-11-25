@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Python Project</title>
+
+    <style>
+        body {
+            background: linear-gradient(120deg, #dbeafe, #ede9fe);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .main {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4338ca;
+        }
+
+        .card {
+            background: #f3f4f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+
+        button {
+            background: #4338ca;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #312e81;
+        }
+
+        #output {
+            color: #16a34a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1>Smart Python Project</h1>
+
+        <p>My Beginner Python Programming Project</p>
+
+        <div class="card">
+            <h2>Friendly Greeting Bot</h2>
+            <p>Greets users by their name using Python f-strings.</p>
+        </div>
+
+        <div class="card">
+            <h2>Smart Calculator</h2>
+            <p>Performs basic mathematical operations.</p>
+        </div>
+
+        <button onclick="greet()">Start Greeting</button>
+
+        <p id="output"></p>
+
+    </div>
+
+    <script>
+        function greet() {
+            let name = prompt("Enter your name:");
+
+            if (name === null || name.trim() === "") {
+                document.getElementById("output").innerHTML =
+                    "Hello Guest! Welcome.";
+            } else {
+                document.getElementById("output").innerHTML =
+                    "Hello " + name + "! Have a great day.";
+            }
+        }
+    </script>
+</body>
+</html>
